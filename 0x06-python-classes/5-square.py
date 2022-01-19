@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ module for class square """
 
+
 class Square:
     """ Square: define a square
         Attributes:
@@ -17,6 +18,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
     @property
     def size(self):
         """ size: get size of object square
@@ -25,7 +27,7 @@ class Square:
             Returns: size
         """
         return self.__size
-    
+
     @size.setter
     def size(self, size):
         """ size: get size of object square
@@ -50,6 +52,7 @@ class Square:
             the current square area
         """
         return self.__size ** 2
+
     def my_print(self):
         """
         Instance method
