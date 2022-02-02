@@ -4,7 +4,8 @@ def remove_char_at(str, n):
     if n < 0:
         pass
     else:
-        while i < n:
-            i += 1
+        for i in str:
             if i == n:
                 i = ''
+            else:
+                pass
