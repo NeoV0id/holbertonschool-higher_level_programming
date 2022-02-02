@@ -8,6 +8,7 @@ if number > 0:
 elif number < 0:
     num = number * -1
     unit = num % 10
+    unit = unit * -1
 
 if unit == 0:
     print(" is {} and is 0".format(unit))
