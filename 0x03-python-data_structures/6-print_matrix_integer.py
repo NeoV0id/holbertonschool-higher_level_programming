@@ -8,7 +8,7 @@ def print_matrix_integer(matrix[[]]):
         for j in i:
             if type(j) is not integer:
                 return
-            elif j:
+            elif j is not None:
                 print(j, end="")
             elif j != len(i)-1:
                 print(" ")
