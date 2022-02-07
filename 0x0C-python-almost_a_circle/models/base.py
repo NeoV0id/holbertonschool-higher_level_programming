@@ -56,3 +56,6 @@ class Base():
             return []
         else:
             return json.loads(json_string)
+
+    def create(cls, **dictionnary):
+        return
