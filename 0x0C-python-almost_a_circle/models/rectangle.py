@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Rectangle module
-"""
+""" Rectangle module """
 
 
 from base import Base
