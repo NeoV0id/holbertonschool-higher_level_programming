@@ -1,3 +1,7 @@
-This directory is a project of a recap of all previous projects in python. It contains 20 tasks :
-- A test file : tests
-- 
+This directory is a project in python. It contains:
+- A test file : tests/test_models/test_base.py
+- models directory :
+	- base.py: initialisation of super class Base
+	- rectangle.py: initialisation of sub/super class Rectangle
+	- square.py: initialisation of sub class Square
+	- __init__.py file
