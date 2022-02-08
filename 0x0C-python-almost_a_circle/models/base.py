@@ -9,13 +9,20 @@ class Base():
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        Init method
+        args:
+            id: int id
+        """
         self.id = id
 
     @property
     def id(self):
+        """ id getter """
         return self.__id
     @id.setter
     def id(self, id):
+        """ id setter """
         if id is not None:
             self.__id = id
         else:
@@ -58,4 +65,5 @@ class Base():
             return json.loads(json_string)
 
     def create(cls, **dictionnary):
+        """ create a dictionnary from base """
         return
