@@ -16,6 +16,9 @@ class Square(Rectangle):
             x(int): x
             y(int): y
             id(int): the id inherited from rectangle
+        Raise:
+            TypeError
+            ValueError
         """
         super().__init__(size, size, x, y, id)
 
