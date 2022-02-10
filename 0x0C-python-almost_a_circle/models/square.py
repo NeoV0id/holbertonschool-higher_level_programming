@@ -16,7 +16,7 @@ class Square(Rectangle):
             x(int): x
             y(int): y
             id(int): the id inherited from rectangle
-        Raise:
+        raises:
             TypeError
             ValueError
         """
@@ -28,7 +28,7 @@ class Square(Rectangle):
                 raise ValueError("width must be > 0")
             else:
                 self.__size = size
-                suwidth = size
+                width = size
                 height = size
 
     def __str__(self):
