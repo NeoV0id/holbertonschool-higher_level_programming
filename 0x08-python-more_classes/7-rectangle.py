@@ -11,10 +11,14 @@ class Rectangle:
         Args:
             width: width
             height: height
+            number_of_instances: count the number of object created
         """
+        number_of_instances = 0
+        print_symbol = "#"
 
         self.__width = width
         self.__height = height
+        number_of_instances += 1
 
     @property
     def width(self):
@@ -87,3 +91,16 @@ class Rectangle:
             for j in range(self.__width):
                 print("#", end="")
             print("")
+
+    def __repr__(self):
+        """
+        return string representation of a string
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """
+        print 'Bye Rectangle' when an istance of a Rectangle is deleted
+        """
+        number_of_instances -= 1
+        print("Bye Rectangle...")

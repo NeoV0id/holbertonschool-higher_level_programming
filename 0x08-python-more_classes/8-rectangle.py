@@ -11,10 +11,14 @@ class Rectangle:
         Args:
             width: width
             height: height
+            number_of_instances: count the number of object created
         """
+        number_of_instances = 0
+        print_symbol = "#"
 
         self.__width = width
         self.__height = height
+        number_of_instances += 1
 
     @property
     def width(self):
@@ -87,3 +91,28 @@ class Rectangle:
             for j in range(self.__width):
                 print("#", end="")
             print("")
+
+    def __repr__(self):
+        """
+        return string representation of a string
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """
+        print 'Bye Rectangle' when an istance of a Rectangle is deleted
+        """
+        number_of_instances -= 1
+        print("Bye Rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if rect_1 is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        elif rect_2 is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        else:
+            if rect_1.area < rect_2.area():
+                return rect_2
+            else:
+                return rect_1
