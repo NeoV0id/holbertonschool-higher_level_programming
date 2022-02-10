@@ -17,7 +17,6 @@ class Square(Rectangle):
             y(int): y
             id(int): the id inherited from rectangle
         """
-        self.__size = width, height
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -43,7 +42,7 @@ class Square(Rectangle):
                 size (int): square size, must be int
         """
         try:
-            self.__size = size
+            self.__size = width, height
             if (type(size) != int):
                 raise TypeError
             elif (size <= 0):
