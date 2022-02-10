@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Rectangle module """
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -18,10 +18,33 @@ class Rectangle(Base):
             y: y
             id: id(base)
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if (type(width) != int):
+            raise TypeError("width must be an integer")
+        elif (width <= 0):
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
+
+        if (type(height) != int):
+            raise TypeError("height must be an integer")
+        elif (height <= 0):
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
+
+        if (type(x) != int):
+            raise TypeError("x must be an integer")
+        elif (x < 0):
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
+
+        if (type(y) != int):
+            raise TypeError("y must be an integer")
+        if (y < 0):
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
         super().__init__(id)
 
     @property
@@ -37,14 +60,10 @@ class Rectangle(Base):
         width setter
         """
         try:
-            self.__width = n
-            if (type(n) != int):
-                raise TypeError
-            elif (n <= 0):
-                raise ValueError
-        except TypeError:
+            self.__width = width
+        except TypeError as err1:
             print("width must be an integer")
-        except ValueError:
+        except ValueError as err2:
             print("width must be > 0")
 
     @property
@@ -61,10 +80,6 @@ class Rectangle(Base):
         """
         try:
             self.__height = n
-            if (type(n) != int):
-                raise TypeError
-            elif (n <= 0):
-                raise ValueError
         except TypeError:
             print("height must be an integer")
         except ValueError:
@@ -84,10 +99,6 @@ class Rectangle(Base):
         """
         try:
             self.__x = n
-            if (type(n) != int):
-                raise TypeError
-            if (n < 0):
-                raise ValueError
         except TypeError:
             print("x must be an integer")
         except ValueError:
@@ -107,10 +118,6 @@ class Rectangle(Base):
         """
         try:
             self.__y = n
-            if (type(n) != int):
-                raise TypeError
-            if (n < 0):
-                raise ValueError
         except TypeError:
             print("y must be an integer")
         except ValueError:
