@@ -51,9 +51,9 @@ class Square(Rectangle):
                 width = size
                 height = size
         except TypeError:
-            print("size must be an integer")
+            print("width must be an integer")
         except ValueError:
-            print("size must be > 0")
+            print("width must be > 0")
 
     def update(self, *args, **kwargs):
         """
