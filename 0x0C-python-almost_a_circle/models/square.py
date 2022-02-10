@@ -12,13 +12,11 @@ class Square(Rectangle):
         """
         Init method
         Args:
-            size(int): size of the square
-            x(int): x
-            y(int): y
-            id(int): the id inherited from rectangle
-        raises:
-            TypeError
-            ValueError
+            size: size of the square
+            size: size
+            x: x
+            y: y
+            id: the id inherited from rectangle
         """
         super().__init__(size, size, x, y, id)
 
