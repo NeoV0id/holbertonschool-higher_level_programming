@@ -13,7 +13,8 @@ class Square(Rectangle):
         Init method
         Args:
             size: size of the square
-            size: size
+            width: width
+            height: height
             x: x
             y: y
             id: the id inherited from rectangle
