@@ -59,17 +59,12 @@ class Rectangle(Base):
         """
         width setter
         """
-        try:
-            if (type(width) != int):
-                raise TypeError("width must be an integer")
-            elif (width <= 0):
-                raise ValueError("width must be > 0")
-            else:
-                self.__width = width
-        except TypeError as err1:
-            print("width must be an integer")
-        except ValueError as err2:
-            print("width must be > 0")
+        if (type(width) != int):
+            raise TypeError("width must be an integer")
+        elif (width <= 0):
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
 
     @property
     def height(self):
@@ -83,17 +78,12 @@ class Rectangle(Base):
         """
         height setter
         """
-        try:
-            if (type(height) != int):
-                raise TypeError("height must be an integer")
-            elif (height <= 0):
-                raise ValueError("height must be > 0")
-            else:
-                self.__height = height
-        except TypeError:
-            print("height must be an integer")
-        except ValueError:
-            print("height must be > 0")
+        if (type(height) != int):
+            raise TypeError("height must be an integer")
+        elif (height <= 0):
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
 
     @property
     def x(self):
@@ -107,17 +97,12 @@ class Rectangle(Base):
         """
         x setter
         """
-        try:
-            if (type(x) != int):
-                raise TypeError("x must be an integer")
-            elif (x < 0):
-                raise ValueError("x must be >= 0")
-            else:
-                self.__x = x
-        except TypeError:
-            print("x must be an integer")
-        except ValueError:
-            print("x must be >= 0")
+        if (type(x) != int):
+            raise TypeError("x must be an integer")
+        elif (x < 0):
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
 
     @property
     def y(self):
@@ -131,17 +116,12 @@ class Rectangle(Base):
         """
         y setter
         """
-        try:
-            if (type(y) != int):
-                raise TypeError("y must be an integer")
-            if (y < 0):
-                raise ValueError("y must be >= 0")
-            else:
-                self.__y = y
-        except TypeError:
-            print("y must be an integer")
-        except ValueError:
-            print("y must be >= 0")
+        if (type(y) != int):
+            raise TypeError("y must be an integer")
+        if (y < 0):
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
 
     def area(self):
         """
