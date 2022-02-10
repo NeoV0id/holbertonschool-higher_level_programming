@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Square module """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -57,7 +57,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         else:
             self.__size = size
-            suwidth = size
+            width = size
             height = size
 
     def update(self, *args, **kwargs):
