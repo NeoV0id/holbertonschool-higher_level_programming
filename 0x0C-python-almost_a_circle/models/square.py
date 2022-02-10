@@ -17,7 +17,7 @@ class Square(Rectangle):
             y(int): y
             id(int): the id inherited from rectangle
         """
-        super().__init__(size, size, x, y, id)
+        super().__init__(width, height, x, y, id)
 
     def __str__(self):
         """
