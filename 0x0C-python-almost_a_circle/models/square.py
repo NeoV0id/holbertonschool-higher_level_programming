@@ -42,7 +42,8 @@ class Square(Rectangle):
                 size (int): square size, must be int
         """
         try:
-            self.__size = width, height
+            size = width, height
+            self.__size = size
             if (type(size) != int):
                 raise TypeError
             elif (size <= 0):
