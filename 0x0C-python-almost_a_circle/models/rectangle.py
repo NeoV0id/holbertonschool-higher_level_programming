@@ -36,12 +36,16 @@ class Rectangle(Base):
         """
         width setter
         """
-        if (type(n) != int):
-            raise TypeError("width must be an integer")
-        elif (n <= 0):
-            raise ValueError("width must be > 0")
-        else:
+        try:
             self.__width = n
+            if (type(n) != int):
+                raise TypeError
+            elif (n <= 0):
+                raise ValueError
+        except TypeError:
+            print("width must be an integer")
+        except ValueError:
+            print("width must be > 0")
 
     @property
     def height(self):
@@ -55,12 +59,16 @@ class Rectangle(Base):
         """
         height setter
         """
-        if (type(n) != int):
-            raise TypeError("height must be an integer")
-        elif (n <= 0):
-            raise ValueError("height must be > 0")
-        else:
+        try:
             self.__height = n
+            if (type(n) != int):
+                raise TypeError
+            elif (n <= 0):
+                raise ValueError
+        except TypeError:
+            print("height must be an integer")
+        except ValueError:
+            print("height must be > 0")
 
     @property
     def x(self):
@@ -74,12 +82,16 @@ class Rectangle(Base):
         """
         x setter
         """
-        if (type(n) != int):
-            raise TypeError("x must be an integer")
-        if (n < 0):
-            raise ValueError("x must be >= 0")
-        else:
+        try:
             self.__x = n
+            if (type(n) != int):
+                raise TypeError
+            if (n < 0):
+                raise ValueError
+        except TypeError:
+            print("x must be an integer")
+        except ValueError:
+            print("x must be >= 0")
 
     @property
     def y(self):
@@ -93,12 +105,16 @@ class Rectangle(Base):
         """
         y setter
         """
-        if (type(n) != int):
-            raise TypeError("y must be an integer")
-        if (n < 0):
-            raise ValueError("y must be >= 0")
-        else:
+        try:
             self.__y = n
+            if (type(n) != int):
+                raise TypeError
+            if (n < 0):
+                raise ValueError
+        except TypeError:
+            print("y must be an integer")
+        except ValueError:
+            print("y must be >= 0")
 
     def area(self):
         """
