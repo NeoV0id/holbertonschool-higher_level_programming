@@ -17,7 +17,16 @@ class Square(Rectangle):
             y(int): y
             id(int): the id inherited from rectangle
         """
-        Rectangle.__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
+
+        if (type(size) != int):
+                raise TypeError("width must be an integer")
+            elif (size <= 0):
+                raise ValueError("width must be > 0")
+            else:
+                self.__size = size
+                suwidth = size
+                height = size
 
     def __str__(self):
         """
@@ -41,19 +50,14 @@ class Square(Rectangle):
             Args:
                 size (int): square size, must be int
         """
-        try:
-            if (type(size) != int):
-                raise TypeError
-            elif (size <= 0):
-                raise ValueError
-            else:
-                self.__size = size
-                suwidth = size
-                height = size
-        except TypeError:
-            print("width must be an integer")
-        except ValueError:
-            print("width must be > 0")
+        if (type(size) != int):
+            raise TypeError("width must be an integer")
+        elif (size <= 0):
+            raise ValueError("width must be > 0")
+        else:
+            self.__size = size
+            suwidth = size
+            height = size
 
     def update(self, *args, **kwargs):
         """
