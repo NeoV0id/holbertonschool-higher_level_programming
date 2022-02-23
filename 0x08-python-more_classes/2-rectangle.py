@@ -12,9 +12,19 @@ class Rectangle:
             width: width
             height: height
         """
+        if type(width) is not int:
+            raise TypeError("height must be an integer")
+        elif (width < 0):
+            raise ValueError("height must be >= 0")
+        else:
+            self.__width = width
 
-        self.__width = width
-        self.__height = height
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        elif (height < 0):
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = height
 
     @property
     def width(self):
@@ -24,16 +34,16 @@ class Rectangle:
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """
         width setter
         """
-        if (type(value) != int):
+        if type(width) is not int:
             raise TypeError("width must be an integer")
-        elif (value < 0):
+        elif (width < 0):
             raise ValueError("width must be >= 0")
         else:
-            self.__width = value
+            self.__width = width
 
     @property
     def height(self):
@@ -43,16 +53,16 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         """
         height setter
         """
-        if (type(value) != int):
+        if type(height) is not int:
             raise TypeError("height must be an integer")
-        elif (value < 0):
+        elif (height < 0):
             raise ValueError("height must be >= 0")
         else:
-            self.__height = value
+            self.__height = height
 
     def area(self):
         """
@@ -65,7 +75,6 @@ class Rectangle:
         returns rectangle perimeter
         """
         if self.__height or self.__width == 0:
-            perimeter = 0
+            return 0
         else:
-            perimeter = (self.__width + self.__height) * 2
-        return perimeter
+            return (self.__width + self.__height) * 2

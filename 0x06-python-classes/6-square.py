@@ -31,7 +31,8 @@ class Square:
 
     @size.setter
     def size(self, size):
-        """ size: get size of object square
+        """ 
+            size: get size of object square
             Args:
                 size (int): square size, must be int
         """
@@ -49,14 +50,18 @@ class Square:
     @property
     def position(self):
         """
-        position getter
+            position getter
+            Args:
+                None
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         """
-        position setter
+            position setter
+            Args:
+                value: is the position
         """
         try:
             self.__position = value
@@ -67,17 +72,17 @@ class Square:
 
     def area(self):
         """
-        Instance method
-        Returns:
-            the current square area
+            Instance method
+            Returns:
+                the current square area
         """
         return self.__size ** 2
 
     def my_print(self):
         """
-        Instance method
-        Returns:
-            the printed square
+            Instance method
+            Returns:
+                the printed square
         """
         if self.__size == 0:
             print("")
