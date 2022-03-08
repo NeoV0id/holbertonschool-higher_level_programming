@@ -55,3 +55,11 @@ TypeError: b must be an integer
 >>> b = -33
 >>> add_integer(a, b)
 -30
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
