@@ -1,13 +1,7 @@
 #!/usr/bin/node
 
-if (argv.$1 === null){
-	console.log ('Not a number');
-}else{
-	argv.$1 = (int) argv.$1;
-
-	if (typeof argv.$1 === "number"){
-		console.log(argv.$1);
-	}else{
-		console.log('Not a number');
-	}
+if (isNaN(process.argv[2]) || process.argv[2] === undefined) {
+	  console.log('Not a number');
+} else {
+	  console.log('My number:', parseInt(process.argv[2]));
 }
