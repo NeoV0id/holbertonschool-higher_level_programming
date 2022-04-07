@@ -22,6 +22,6 @@ class Square extends Rectangle {
 				process.stdout.write('\n');
 			}
 		}
+	}
 }
-
 module.exports = Square;
