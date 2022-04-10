@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module for task 0-select_states.py """
+""" Module for task 3 """
 
 
 import MySQLdb
@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
     cur = conn.cursor()
     cur.execute(
-            "SELECT * FROM states WHERE name=%s\
-            ORDER BY states.id ASC", (sys.argv[4],))
+            "SELECT * FROM 'states' WHERE 'name' IN '{}'\
+            ORDER BY 'states'.'id' ASC".format(sys.argv[4],))
     rows = cur.fetchall()
     for row in rows:
         print(row)
