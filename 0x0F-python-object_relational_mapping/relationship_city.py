@@ -8,7 +8,7 @@ Base = declarative_base()
 
 
 class City(Base):
-    """ Represents a City 
+    """ Represents a City
     Attributes:
         - __tablename__ (str): cities (name of table)
         - id (column): column of table

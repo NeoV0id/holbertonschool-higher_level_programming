@@ -6,8 +6,8 @@ from relationship_city import Base, City
 
 
 class State(Base):
-    """ 
-    Represents a State 
+    """
+    Represents a State
         Attributes:
             - __tablename__ (str): cities (name of table)
             - id (column): column of table
