@@ -4,7 +4,7 @@
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 import sys
-import sqlalchemy
+from sqlalchemy import *
 
 
 if __name__ == "__main__":
