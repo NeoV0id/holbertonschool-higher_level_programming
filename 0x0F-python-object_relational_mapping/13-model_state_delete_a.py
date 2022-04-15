@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ Module for task 13 """
 
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 import sys
+import sqlalchemy
 
 
 if __name__ == "__main__":
